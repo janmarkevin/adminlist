@@ -7,12 +7,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <meta name="description" content="" />
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'gyo7rmi',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <header class="header">
+        <div class="wrapper__header">
+            <div class="header__logo">
+                <div class="logo">
+                    <a href="#" class="logo__link" title="Logo">
+                        <img src="img/logo.png" alt="logo" class="logo__img">
+                    </a>
+                </div>
+            </div>
+            <div class="header__menu">
+                <div class="header__menu-wrapper">
+                    <div class="header__menu-line"></div>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="#" class="header__links header__links--active">ユーザー一覧</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#" class="header__links">ログアウト</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-wrapper">
+        <div class="wrapper__main">
+            <div class="main__title">
+                <span class="text__title">ユーザー一覧</span>
+            </div>
+            <div class="main__search">
+                <form action="#" class="main__form">
+                    <div class="main__check-box">
+                        <input type="checkbox" name="details" value="details">
+                        <label for="details">個人情報欄を表示</label>
+                    </div>
+                    <div class="main__searchform">
+                        <input type="text">
+                        <button>
+                            <img src="img/search.png" alt="search">
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="main__table">
+                <table class="table">
+                    <thead class="table__header">
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                ID
+                            </span>
+                            <img src="img/sorted.png" alt="sort" class="table__icon">
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                名前
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                名前（フリガナ）
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                性別性別
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                年齢
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                生年月日
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                メールアドレス
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                公認会計士登録番号・
+                                準会員番号 :
+                            </span>
+                        </th>
+                        <th class="table__head">
+                            <span class="text__title text__title--table">
+                                合格者番号
+                            </span>
+                        </th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
