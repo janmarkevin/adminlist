@@ -518,14 +518,20 @@ li {
     font-family: "noto-sans-cjk-jp", sans-serif;
     text-transform: uppercase;
     color: #fff;
-    border-bottom: 2px solid #7b735a; }
+    border-bottom: 2px solid #7b735a;
+    padding: 15px 0; }
     .table__head:first-of-type {
       font-weight: 700; }
+  .table__icon {
+    position: relative;
+    top: 2px;
+    left: 4px; }
   .table__body .table__row:first-of-type .table__data {
     padding: 14px 18px; }
   .table__data {
     padding: 22px 18px 16px;
-    border-bottom: 1px solid #a9a083; }
+    border-bottom: 1px solid #a9a083;
+    text-align: center; }
   .table__number {
     font-family: "Montserrat", sans-serif;
     font-weight: 700; }
