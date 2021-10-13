@@ -1,0 +1,79 @@
+.header {
+  background: $primary-color;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+
+  &__menu {
+    &-wrapper {
+      position: relative;
+    }
+
+    &-line {
+      position: relative;
+      width: 31.5px;
+      height: 2px;
+      background: $light-colors;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 31.5px;
+        background: $light-colors;
+        top: 17px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 31.5px;
+        background: $light-colors;
+        top: 8px;
+      }
+    }
+
+    &-nav {
+      display: none;
+    }
+
+    &-list {
+      width: 159px;
+      min-height: 79px;
+      border-radius: 20px;
+      position: absolute;
+      top: 28px;
+      right: 0;
+      background: white;
+      padding: 5px 10px;
+    }
+
+    &-item {
+      padding: 8px 10px;
+      position: relative;
+
+      &:first-of-type::after {
+        content: "";
+        position: absolute;
+        background: $secondary-color;
+        height: 1px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &-links {
+      font-family: $font-family-Notosans;
+      font-size: 1.2rem;
+      font-weight: $font-weight-bold;
+      color: $darker-secondary-color;
+
+      &--active {
+        color: $light-secondary-color;
+      }
+    }
+  }
+}

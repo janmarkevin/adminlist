@@ -1,2 +1,12 @@
+@import 'settings/font-family';
+@import 'settings/fonts';
+@import 'settings/color';
+
+@import 'tools/margin';
+
 @import 'generic/_normalize.scss';
-@import 'generic/_reset.scss';
+
+@import 'elements/elements';
+
+@import 'components/wrapper';
+@import 'components/header';
