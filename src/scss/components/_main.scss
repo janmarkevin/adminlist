@@ -10,6 +10,42 @@
     align-items: center;
   }
 
+  &__searchform {
+    display: flex;
+    margin: 0 0 19px 0;
+  }
+
+  &__search-box {
+    width: 224px;
+    height: 35px;
+    border: 2px solid $darker-secondary-color;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: $font-weight-bold;
+    color: $darker-secondary-color;
+    padding: 5px;
+    font-family: $font-family-Montserrat;
+    outline: none;
+
+    &::placeholder {
+      color: #CECECE;
+    }
+  }
+
+  &__search-btn {
+    height: 35px;
+    width: 44px;
+    background: $darker-secondary-color;
+    background: #7B735A;
+    border: #7B735A;
+
+    & img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+  }
+
   &__checkbox {
     position: relative;
   }
