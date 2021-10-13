@@ -535,3 +535,20 @@ li {
   .table__number {
     font-family: "Montserrat", sans-serif;
     font-weight: 700; }
+
+.number {
+  padding: 35px 0 68px; }
+  .number__list {
+    display: flex;
+    justify-content: center; }
+  .number__links {
+    font-family: "noto-sans-cjk-jp", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #111;
+    padding: 0 8px; }
+    .number__links--active {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #a9a083;
+      text-decoration: underline; }
