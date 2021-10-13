@@ -415,6 +415,11 @@ li {
   justify-content: space-between;
   align-items: center; }
 
+.wrapper__main {
+  width: 90%;
+  max-width: 921px;
+  margin: 0 auto; }
+
 .header {
   background: #111;
   min-height: 100px;
@@ -443,7 +448,7 @@ li {
       background: #fff;
       top: 8px; }
   .header__menu-nav {
-    display: block; }
+    display: none; }
   .header__menu-list {
     width: 159px;
     min-height: 79px;
@@ -471,3 +476,56 @@ li {
     color: #7b735a; }
     .header__menu-links--active {
       color: #bfbfbf; }
+
+.text__header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #111; }
+
+.text__checkbox {
+  font-family: "noto-sans-cjk-jp", sans-serif;
+  font-size: 1.2rem;
+  font-family: 700; }
+
+.text__title {
+  font-family: "noto-sans-cjk-jp", sans-serif;
+  font-size: 1rem;
+  font-weight: 700; }
+
+.main__text {
+  text-align: center;
+  padding: 68px 0 40px; }
+
+.main__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.main__checkbox {
+  position: relative; }
+
+.table {
+  border-spacing: 0;
+  border: 2px solid #7b735a;
+  width: 100%;
+  border-collapse: collapse; }
+  .table__header {
+    background: #a9a083; }
+  .table__head {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "noto-sans-cjk-jp", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom: 2px solid #7b735a; }
+    .table__head:first-of-type {
+      font-weight: 700; }
+  .table__body .table__row:first-of-type .table__data {
+    padding: 14px 18px; }
+  .table__data {
+    padding: 22px 18px 16px;
+    border-bottom: 1px solid #a9a083; }
+  .table__number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; }

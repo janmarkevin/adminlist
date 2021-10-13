@@ -1,0 +1,50 @@
+.checkbox {
+  opacity: 0;
+
+  &__text {
+    font-family: $font-family-Notosans;
+    font-size: 1.2rem;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+  }
+
+  & + &__text {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 25px;
+  }
+
+  & + &__text::before {
+    content: "";
+    position: absolute;
+    left: -13px;
+    top: -5px;
+    width: 27px;
+    height: 27px;
+    outline: 2px solid $darker-secondary-color;
+    background: white;
+  }
+
+  &:checked + &__text::before {
+    content: "";
+    position: absolute;
+    left: -13px;
+    top: -5px;
+    width: 27px;
+    height: 27px;
+    outline: 2px solid red;
+    background: white;
+  }
+
+  &:checked + &__text::after {
+    content: "";
+    position: absolute;
+    left: -13px;
+    top: -5px;
+    width: 27px;
+    height: 27px;
+    background-image: url(img/check.png);
+    background-size: contain;
+  }
+}
