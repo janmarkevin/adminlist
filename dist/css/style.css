@@ -525,7 +525,8 @@ li {
   width: 44px;
   background: #7b735a;
   background: #7B735A;
-  border: #7B735A; }
+  border: #7B735A;
+  cursor: pointer; }
   .main__search-btn img {
     width: 22px;
     height: 22px;
