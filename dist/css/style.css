@@ -430,29 +430,28 @@ li {
   .header__menu-wrapper {
     position: relative;
     height: 45px;
+    width: 45px;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer; }
   .header__menu-line {
     position: relative;
     width: 31.5px;
     height: 2px;
     background: #fff;
-    cursor: pointer; }
-    .header__menu-line::after {
-      content: "";
+    transition: all 0.5s ease-in-out; }
+    .header__menu-line::after, .header__menu-line::before {
+      content: '';
       position: absolute;
-      height: 2px;
       width: 31.5px;
+      height: 2px;
       background: #fff;
-      top: 17px; }
+      transition: all 0.5s ease-in-out; }
     .header__menu-line::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 31.5px;
-      background: #fff;
-      top: 8px; }
+      transform: translateY(-10px); }
+    .header__menu-line::after {
+      transform: translateY(10px); }
   .header__menu-nav {
     display: none; }
   .header__menu-list {
@@ -481,8 +480,18 @@ li {
     font-size: 1.2rem;
     font-weight: 700;
     color: #7b735a; }
+    .header__menu-links:hover {
+      color: #bfbfbf; }
     .header__menu-links--active {
       color: #bfbfbf; }
+  .header__menu-wrapper.open .header__menu-line {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none; }
+    .header__menu-wrapper.open .header__menu-line::before {
+      transform: rotate(45deg) translate(35px, -35px); }
+    .header__menu-wrapper.open .header__menu-line::after {
+      transform: rotate(-45deg) translate(35px, 35px); }
 
 .text__header {
   font-family: "Montserrat", sans-serif;
@@ -514,6 +523,8 @@ li {
   padding: 5px;
   font-family: "Montserrat", sans-serif;
   outline: none; }
+  .main__search-box:focus {
+    border-color: #a9a083; }
   .main__search-box::placeholder {
     color: #CECECE; }
 
@@ -521,9 +532,10 @@ li {
   height: 35px;
   width: 44px;
   background: #7b735a;
-  background: #7B735A;
-  border: #7B735A;
+  border: #7b735a;
   cursor: pointer; }
+  .main__search-btn:hover {
+    background: #a9a083; }
   .main__search-btn img {
     width: 22px;
     height: 22px;
@@ -557,7 +569,7 @@ li {
     left: 4px;
     cursor: pointer; }
   .table__body .table__row:first-of-type .table__data {
-    padding: 14px 15px; }
+    padding: 15px; }
   .table__data {
     padding: 22px 15px 16px;
     border-bottom: 1px solid #a9a083;
@@ -586,6 +598,8 @@ li {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .pagination__links:hover {
+      color: #a9a083; }
     .pagination__links--active {
       font-size: 1.2rem;
       font-weight: 700;
