@@ -1,0 +1,30 @@
+.checkbox {
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border: 2px solid $secondary-color;
+  border-radius: 4px;
+  vertical-align: top;
+  position: relative;
+  outline: 0;
+
+  &:checked {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15px;
+      height: 11px;
+      background-size: contain;
+      background-image: url(../../dist/img/check.png);
+    }
+  }
+
+  &__text {
+    padding: 0 0 0 10px;
+    font-size: 1.2rem;
+    font-family: $font-family-Notosans;
+  }
+}

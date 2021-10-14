@@ -1,0 +1,56 @@
+.table {
+  border-spacing: 0;
+  border: 2px solid $darker-secondary-color;
+  width: 100%;
+  border-collapse: collapse;
+
+  &__header {
+    background: $secondary-color;
+  }
+
+  &__head {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: $font-family-Notosans;
+    text-transform: uppercase;
+    color: $light-colors;
+    border-bottom: 2px solid $darker-secondary-color;
+    padding: 15px 0;
+
+    &:first-of-type {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    top: 2px;
+    left: 4px;
+    cursor: pointer;
+  }
+
+  &__body {
+    .table__row:first-of-type .table__data {
+      padding: 14px 15px;
+    }
+  }
+
+  &__data {
+    padding: 22px 15px 16px;
+    border-bottom: 1px solid $secondary-color;
+    text-align: center;
+    font-family: $font-family-Notosans;
+    font-size: 1rem;
+  }
+
+  &__number {
+    font-family: $font-family-Montserrat;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+  }
+
+  &__pagination {
+    font-family: $font-family-Montserrat;
+    font-weight: $font-weight-bold;
+  }
+}

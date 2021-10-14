@@ -1,0 +1,25 @@
+.pagination {
+  padding: 35px 0 68px;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__links {
+    font-family: $font-family-Notosans;
+    font-weight: $font-weight-regular;
+    font-size: 1.1rem;
+    color: $primary-color;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      font-size: 1.2rem;
+      font-weight: $font-weight-bold;
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
+}
