@@ -1,4 +1,4 @@
-.number {
+.pagination {
   padding: 35px 0 68px;
   &__list {
     display: flex;
@@ -11,6 +11,9 @@
     font-size: 1.1rem;
     color: $primary-color;
     padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &--active {
       font-size: 1.2rem;
