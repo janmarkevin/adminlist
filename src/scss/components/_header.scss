@@ -8,8 +8,10 @@
     &-wrapper {
       position: relative;
       height: 45px;
+      width: 45px;
       display: flex;
       align-items: center;
+      justify-content: center;
       cursor: pointer;
     }
 
@@ -18,24 +20,24 @@
       width: 31.5px;
       height: 2px;
       background: $light-colors;
-      cursor: pointer;
+      transition: all 0.5s ease-in-out;
 
-      &::after {
-        content: "";
+      &::after,
+      &::before {
+        content: '';
         position: absolute;
-        height: 2px;
         width: 31.5px;
+        height: 2px;
         background: $light-colors;
-        top: 17px;
+        transition: all 0.5s ease-in-out;
       }
 
       &::before {
-        content: "";
-        position: absolute;
-        height: 2px;
-        width: 31.5px;
-        background: $light-colors;
-        top: 8px;
+        transform: translateY(-10px);
+      }
+
+      &::after {
+        transform: translateY(10px);
       }
     }
 
@@ -76,9 +78,28 @@
       font-weight: $font-weight-bold;
       color: $darker-secondary-color;
 
+      &:hover {
+        color: $light-secondary-color;
+      }
+
       &--active {
         color: $light-secondary-color;
       }
+    }
+  }
+
+    // animation
+  &__menu-wrapper.open &__menu-line {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+
+    &::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(35px, 35px);
     }
   }
 }

@@ -27,6 +27,10 @@
     font-family: $font-family-Montserrat;
     outline: none;
 
+    &:focus {
+      border-color: $secondary-color;
+    }
+
     &::placeholder {
       color: #CECECE;
     }
@@ -36,9 +40,12 @@
     height: 35px;
     width: 44px;
     background: $darker-secondary-color;
-    background: #7B735A;
-    border: #7B735A;
+    border: $darker-secondary-color;;
     cursor: pointer;
+
+    &:hover {
+      background: $secondary-color;
+    }
 
     & img {
       width: 22px;
