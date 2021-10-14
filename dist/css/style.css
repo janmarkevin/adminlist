@@ -399,7 +399,8 @@ template {
   -webkit-tap-highlight-color: transparent; }
 
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  letter-spacing: 1px; }
 
 a {
   text-decoration: none; }
@@ -533,7 +534,9 @@ li {
     object-fit: contain; }
 
 .main__checkbox {
-  position: relative; }
+  position: relative;
+  display: flex;
+  align-items: center; }
 
 .table {
   border-spacing: 0;
@@ -582,3 +585,27 @@ li {
       font-weight: 700;
       color: #a9a083;
       text-decoration: underline; }
+
+.checkbox {
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border: 2px solid #a9a083;
+  border-radius: 4px;
+  vertical-align: top;
+  position: relative;
+  outline: 0; }
+  .checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 11px;
+    background-size: contain;
+    background-image: url(../../dist/img/check.png); }
+  .checkbox__text {
+    padding: 0 0 0 10px;
+    font-size: 1.2rem;
+    font-family: "noto-sans-cjk-jp", sans-serif; }
