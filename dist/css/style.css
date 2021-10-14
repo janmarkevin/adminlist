@@ -554,13 +554,20 @@ li {
   .table__icon {
     position: relative;
     top: 2px;
-    left: 4px; }
+    left: 4px;
+    cursor: pointer; }
   .table__body .table__row:first-of-type .table__data {
-    padding: 14px 18px; }
+    padding: 14px 15px; }
   .table__data {
-    padding: 22px 18px 16px;
+    padding: 22px 15px 16px;
     border-bottom: 1px solid #a9a083;
-    text-align: center; }
+    text-align: center;
+    font-family: "noto-sans-cjk-jp", sans-serif;
+    font-size: 1rem; }
+  .table__number {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700; }
   .table__pagination {
     font-family: "Montserrat", sans-serif;
     font-weight: 700; }
