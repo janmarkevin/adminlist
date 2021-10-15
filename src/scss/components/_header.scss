@@ -15,6 +15,30 @@
       cursor: pointer;
     }
 
+    &-toggler {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+  // animation for menu
+    &-toggler:checked + &-line {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+
+      &::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+    }
+
     &-line {
       position: relative;
       width: 31.5px;
@@ -41,8 +65,12 @@
       }
     }
 
+    &-toggler:checked ~ &-nav {
+      visibility: visible;
+    }
+
     &-nav {
-      display: none;
+      visibility: hidden;
     }
 
     &-list {
@@ -85,21 +113,6 @@
       &--active {
         color: $light-secondary-color;
       }
-    }
-  }
-
-    // animation
-  &__menu-wrapper.open &__menu-line {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-
-    &::before {
-      transform: rotate(45deg) translate(35px, -35px);
-    }
-
-    &::after {
-      transform: rotate(-45deg) translate(35px, 35px);
     }
   }
 }
